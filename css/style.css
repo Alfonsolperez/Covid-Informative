@@ -1,0 +1,130 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+.py-10{
+	padding: 100px 0;
+}
+
+.my-10{
+	margin-top: 160px;
+}
+
+.navbar-expand-md .navbar-nav .nav-link{
+	margin-right: 10px;
+}
+.carousel-indicators li{
+background-color: #252525;
+}
+.carousel-item .row{
+	height:80vh;
+}
+.carousel-item .row img{
+	float: right;
+}
+.carousel-indicators li {
+  background-color: #fffafa;
+}
+.carousel-control-prev-icon{
+	background:url('../images/left.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.carousel-control-next-icon{
+	background:url('../images/right.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+a.btn-color{
+	background-color: #007BFF;
+	color: white !important;
+}
+a.btn-color:hover {
+	background-color: #0062cc;
+}
+a.btn-color:active {
+	background-color: #0050a6;
+}
+
+a.drop-color{
+	background-color: white;
+	color: black !important;
+}
+
+a.drop-color:hover{
+	background-color: #f2f2f2;
+}
+
+a.drop-color:active{
+	background-color: #e8e8e8;
+}
+
+
+footer{
+	color: #f2f2f2;
+}
+.navbar-toggler span{
+background:url('../images/menu.png');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;	
+}
+
+/*Social Media Icon*/
+.youtube-icon {
+  background: url('../images/spritesheet.png') no-repeat 0px 0px;
+  height: 200px;
+  width: 200px;
+  zoom: 0.125;
+}
+
+.reddit-icon {
+  background: url('../images/spritesheet.png') no-repeat -200px 0px;
+  height: 200px;
+  width: 200px;
+  zoom: 0.125;
+}
+
+.paypal-icon {
+  background: url('../images/spritesheet.png') no-repeat -400px 0px;
+  height: 200px;
+  width: 200px;
+  zoom: 0.125;
+}
+
+.github-icon {
+  background: url('../images/spritesheet.png') no-repeat -600px 0px;
+  height: 200px;
+  width: 200px;
+  zoom: 0.125;
+}
+
+.icon:hover {
+  opacity: 0.7;
+}
+
+
+.title {
+  color: 'rgb(0, 75, 255)';
+  text-align: center; 
+}
+
+.center-obj {
+  display: block;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-img {
+    display: block;
+    margin: 20px auto;
+  }
+  .card{
+  	margin-bottom: 20px;
+  }
+}
