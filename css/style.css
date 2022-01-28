@@ -12,6 +12,25 @@ html,body{
 	margin-top: 160px;
 }
 
+.justify{
+  text-align: justify;
+}
+
+.title {
+  color: 'rgb(0, 75, 255)';
+  text-align: center; 
+}
+
+footer{
+  color: #f2f2f2;
+}
+.navbar-toggler span{
+  background:url('../images/menu.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;  
+}
+
 .navbar-expand-md .navbar-nav .nav-link{
 	margin-right: 10px;
 }
@@ -40,16 +59,34 @@ background-color: #252525;
 	background-position: center;
 }
 
+
 a.btn-color{
 	background-color: #007BFF;
 	color: white !important;
+  position: relative;
+  z-index: 1;
 }
-a.btn-color:hover {
-	background-color: #0062cc;
+
+.btn-color::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0062cc;
+  z-index: -1;
+  transition: transform 250ms ease-in;
+
+  transform: scaleX(0);
+  transform-origin: right;
 }
-a.btn-color:active {
-	background-color: #0050a6;
+
+.btn-color:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
 }
+
 
 a.drop-color{
 	background-color: white;
@@ -64,16 +101,114 @@ a.drop-color:active{
 	background-color: #e8e8e8;
 }
 
+.linkEffect{
+  text-decoration: none;
+  color: #007BFF;
+  position: relative;
+}
 
-footer{
-	color: #f2f2f2;
+.linkEffect::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease-in;
 }
-.navbar-toggler span{
-background:url('../images/menu.png');
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;	
+
+.linkEffect:hover{
+  color: #007BFF;
+  text-decoration: none;
 }
+
+.linkEffect:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.ltr1{
+  position: relative;
+  animation-name: ltr;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+
+}
+
+.ltr2{
+  position: relative;
+  animation-name: ltr;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+
+}
+
+.ltr3{
+  position: relative;
+  animation-name: ltr;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes ltr {
+  0% {left: -1000px}
+  100% {left: 0;}
+}
+
+.rtl1{
+  position: relative;
+  animation-name: rtl;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+
+}
+
+.rtl2{
+  position: relative;
+  animation-name: rtl;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+
+}
+
+.rtl3{
+  position: relative;
+  animation-name: rtl;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes rtl {
+  0% {right: -1000px}
+  100% {right: 0;}
+}
+
+.opc{
+  opacity: 0;
+  animation-name: opc;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+.opc-title{
+  opacity: 0;
+  animation-name: opc;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes opc{
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
 
 /*Social Media Icon*/
 .youtube-icon {
@@ -108,15 +243,10 @@ background-position: center;
   opacity: 0.7;
 }
 
-
-.title {
-  color: 'rgb(0, 75, 255)';
-  text-align: center; 
-}
-
-.center-obj {
+.vidframe {
   display: block;
-  margin: auto;
+  margin: 20px auto;
+  height: 17.5vh
 }
 
 @media screen and (max-width: 768px) {
@@ -125,6 +255,6 @@ background-position: center;
     margin: 20px auto;
   }
   .card{
-  	margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 }
